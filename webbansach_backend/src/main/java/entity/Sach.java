@@ -12,6 +12,8 @@ public class Sach {
     private double giaBan;
     private int  soLuong;
     private double trungBinhXepHang;
-    private List<TheLoai> danhSachTheLoai;
-    private List<HinhAnh> danhSachHinhAnh;
+     List<TheLoai> danhSachTheLoai;
+     List<HinhAnh> danhSachHinhAnh;
+     List<SuDanhGia> danhSachSuDanhGia;
+     List<ChiTietDonHang> danhSachChiTietGioHang;
 }

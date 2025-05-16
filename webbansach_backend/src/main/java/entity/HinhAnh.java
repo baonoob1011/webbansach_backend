@@ -8,4 +8,5 @@ public class HinhAnh {
     private boolean laIcon;
     private String duongDan;
     private String duLieuAnh;
+    private Sach sach;
 }
