@@ -15,5 +15,7 @@ public class Sach {
      List<TheLoai> danhSachTheLoai;
      List<HinhAnh> danhSachHinhAnh;
      List<SuDanhGia> danhSachSuDanhGia;
-     List<ChiTietDonHang> danhSachChiTietGioHang;
+     List<ChiTietDonHang> danhSachChiTietDonHang;
+     List<ChiTietGioHang> danhSachChiTietGioHang;
+     List<SachYeuThich> danhSachSachYeuThich;
 }
