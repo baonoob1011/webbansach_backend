@@ -1,10 +1,10 @@
 package entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+
 
 import java.util.List;
-@Data
+
 @Entity
 @Table(name = "hinh_thuc_giao_hang")
 public class HinhThucGiaoHang {
@@ -18,9 +18,10 @@ public class HinhThucGiaoHang {
     private String moTa;
     @Column(name = "chi_phi_giao_hang")
     private double chiPhiGiaoHang;
-    @OneToMany(mappedBy = "hinhThucGiaoHang",fetch = FetchType.LAZY,cascade = {
-            CascadeType.DETACH, CascadeType.MERGE,
-            CascadeType.PERSIST, CascadeType.REFRESH
+
+    @OneToMany(mappedBy = "hinhThucGiaoHang",fetch = FetchType.LAZY, cascade = {
+            CascadeType.PERSIST, CascadeType.MERGE,
+            CascadeType.DETACH, CascadeType.REFRESH
     })
     private List<DonHang> danhSachDonHang;
 }

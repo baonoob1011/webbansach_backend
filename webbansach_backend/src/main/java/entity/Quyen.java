@@ -1,10 +1,9 @@
 package entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+
 
 import java.util.List;
-@Data
 @Entity
 @Table(name = "quyen")
 public class Quyen {
@@ -16,13 +15,13 @@ public class Quyen {
     private String tenQuyen;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = {
-            CascadeType.DETACH, CascadeType.MERGE,
-            CascadeType.PERSIST, CascadeType.REFRESH
+            CascadeType.PERSIST, CascadeType.MERGE,
+            CascadeType.DETACH, CascadeType.REFRESH
     })
     @JoinTable(
-            name = "nguoi_quyen",
+            name = "nguoidung_quyen",
             joinColumns = @JoinColumn(name = "ma_quyen"),
             inverseJoinColumns = @JoinColumn(name = "ma_nguoi_dung")
     )
-    List<NguoiDung>danhSachNguoiDung;
+    List<NguoiDung> danhSachNguoiDung;
 }
